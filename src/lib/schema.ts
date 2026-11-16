@@ -13,7 +13,7 @@
  */
 
 import { LOCATION_PAGES, LOCATIONS, LOCATIONS_PATH } from '../data/locations';
-import { INDUSTRY_PAGES, INDUSTRIES_PATH, industryPath } from '../data/industries';
+import { INDUSTRY_PAGES, INDUSTRIES_PATH, industryPath, h1Prefix } from '../data/industries';
 import { PUBLISHED_INSIGHTS } from '@/data/insights';
 import { FAQ } from '@/data/faq';
 import { PLATFORMS } from '@/components/platforms/catalog';
@@ -258,10 +258,12 @@ for (const p of LOCATION_PAGES) {
 CRUMBS[LOCATIONS_PATH] = [{ name: 'Where we deliver', path: LOCATIONS_PATH }];
 CRUMBS[INDUSTRIES_PATH] = [{ name: 'Industries', path: INDUSTRIES_PATH }];
 for (const i of INDUSTRY_PAGES) {
-  CRUMBS[industryPath(i.slug)] = [
-    { name: 'Industries', path: INDUSTRIES_PATH },
-    { name: i.name, path: industryPath(i.slug) },
-  ];
+  CRUMBS[industryPath(i.slug)] = i.path
+    ? [{ name: i.name, path: industryPath(i.slug) }]
+    : [
+        { name: 'Industries', path: INDUSTRIES_PATH },
+        { name: i.name, path: industryPath(i.slug) },
+      ];
 }
 
 function breadcrumbList(pathname: string) {
@@ -381,7 +383,7 @@ export function routeGraph(pathname: string, page?: { title: string; description
     graph.push({
       '@type': 'Service',
       '@id': `${url}#service`,
-      name: `Software for ${indPage.headline}`,
+      name: `${h1Prefix(indPage)}${indPage.headline}`,
       serviceType: 'Custom business software development',
       description: indPage.description,
       provider: { '@id': `${ORIGIN}/#organization` },

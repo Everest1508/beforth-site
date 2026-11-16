@@ -8,7 +8,8 @@ export const INDUSTRIES = JSON.parse(
   readFileSync(new URL('../src/data/industries.json', import.meta.url), 'utf8'),
 );
 
-export const industryPath = (slug) => `/industries/${slug}`;
+export const industryPath = (slug) =>
+  INDUSTRIES.find((i) => i.slug === slug)?.path ?? `/industries/${slug}`;
 
 /** Every route the industry pages add, including the /industries hub. */
 export const INDUSTRY_ROUTES = [...INDUSTRIES.map((i) => industryPath(i.slug)), '/industries'];

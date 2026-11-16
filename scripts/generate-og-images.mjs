@@ -193,16 +193,16 @@ async function main() {
     }
   }
   for (const i of INDUSTRIES) {
-    ROUTE_META[`/industries/${i.slug}`] = {
+    ROUTE_META[i.path ?? `/industries/${i.slug}`] = {
       eyebrow: 'Industries',
-      title: `Software for ${i.headline} | BeForth`,
+      title: `${i.h1Prefix ? i.h1Prefix.replace(/ $/, '') : 'Software for'} ${i.headline} | BeForth`,
       sub: 'What we have built, described from the systems.',
     };
   }
   ROUTE_META['/industries'] = {
     eyebrow: 'Industries',
     title: 'What we have built, by industry | BeForth',
-    sub: 'Pharma and interior contractors.',
+    sub: 'Pharma, salons, food retail, interiors and field teams.',
   };
   ROUTE_META['/locations'] = {
     eyebrow: 'Locations',

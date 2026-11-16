@@ -57,6 +57,10 @@ Systems we have built, described without client names: https://beforth.in/indust
 
 - Software for pharma distribution and operations: https://beforth.in/industries/pharma
 - Software for interior and fit-out contractors: https://beforth.in/industries/interiors
+- Software for salons and beauty businesses: https://beforth.in/industries/salons
+- Software for restaurants, bakeries and food retail: https://beforth.in/industries/food-retail
+- Software for field sales and service teams: https://beforth.in/industries/field-sales
+- Platforms and tools we have built: https://beforth.in/platforms
 
 ## Insights
 

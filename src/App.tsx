@@ -1,7 +1,7 @@
 import React, { Suspense, useEffect, useLayoutEffect, useRef, useState } from 'react';
 import { Routes, Route, Link, useLocation } from 'react-router-dom';
 import { LOCATION_PAGES, LOCATIONS_PATH, locationMeta } from './data/locations';
-import { INDUSTRY_PAGES, INDUSTRIES_PATH, industryMeta, industryPath } from './data/industries';
+import { INDUSTRY_PAGES, INDUSTRY_ONLY, INDUSTRIES_PATH, industryMeta, industryPath } from './data/industries';
 import { LazyMotion, MotionConfig, domAnimation } from 'motion/react';
 import * as m from 'motion/react-m';
 import { ArrowUpRight, ArrowRight, ArrowDown, Mail, Phone, MapPin, Check, Compass, Handshake, MousePointerClick, Puzzle } from 'lucide-react';
@@ -853,9 +853,9 @@ function Sectors() {
         <SectionHead title="Where we do our best work." />
         <p className="body max-w-2xl mb-8">
           We have written up the systems we built for{' '}
-          {INDUSTRY_PAGES.map((i, n) => (
+          {INDUSTRY_ONLY.map((i, n) => (
             <React.Fragment key={i.slug}>
-              {n > 0 && ' and '}
+              {n > 0 && (n === INDUSTRY_ONLY.length - 1 ? ' and ' : ', ')}
               <Link to={industryPath(i.slug)} className="text-ink underline underline-offset-4 decoration-signal hover:text-signal transition-colors">{i.name.toLowerCase()}</Link>
             </React.Fragment>
           ))}
@@ -989,6 +989,14 @@ function Footer() {
                   className="flex items-center min-h-[28px] body-tight hover:text-signal transition-colors"
                 >
                   Industries we build for
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/platforms"
+                  className="flex items-center min-h-[28px] body-tight hover:text-signal transition-colors"
+                >
+                  Platforms and tools
                 </Link>
               </li>
             </ul>

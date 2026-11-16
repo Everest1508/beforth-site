@@ -89,6 +89,22 @@
       "destination": "/industries/index.html"
     },
     {
+      "source": "/industries/salons",
+      "destination": "/industries/salons/index.html"
+    },
+    {
+      "source": "/industries/food-retail",
+      "destination": "/industries/food-retail/index.html"
+    },
+    {
+      "source": "/industries/field-sales",
+      "destination": "/industries/field-sales/index.html"
+    },
+    {
+      "source": "/platforms",
+      "destination": "/platforms/index.html"
+    },
+    {
       "source": "/about",
       "destination": "/about/index.html"
     },

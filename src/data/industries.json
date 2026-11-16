@@ -57,9 +57,21 @@
     ],
     "note": "Every system above was shaped around one business's process. Yours would be scoped the same way, starting with discovery. We describe the work without naming clients.",
     "links": [
-      { "to": "/product/delivery-tracking", "label": "Delivery tracking", "note": "Driver app, proof of delivery and routes." },
-      { "to": "/product/hrms", "label": "HRMS", "note": "Attendance, shifts, leave and approvals." },
-      { "to": "/insights/custom-erp-or-off-the-shelf", "label": "Custom or off-the-shelf?", "note": "How to decide before you spend anything." }
+      {
+        "to": "/product/delivery-tracking",
+        "label": "Delivery tracking",
+        "note": "Driver app, proof of delivery and routes."
+      },
+      {
+        "to": "/product/hrms",
+        "label": "HRMS",
+        "note": "Attendance, shifts, leave and approvals."
+      },
+      {
+        "to": "/insights/custom-erp-or-off-the-shelf",
+        "label": "Custom or off-the-shelf?",
+        "note": "How to decide before you spend anything."
+      }
     ]
   },
   {
@@ -113,9 +125,283 @@
     ],
     "note": "This system was shaped around one business's process. Yours would be scoped the same way, starting with discovery. We describe the work without naming clients.",
     "links": [
-      { "to": "/product/hrms", "label": "HRMS", "note": "Attendance, shifts, leave and approvals." },
-      { "to": "/product/mobile-apps", "label": "Mobile apps", "note": "Field apps for staff on site." },
-      { "to": "/insights/what-to-expect-during-erp-discovery", "label": "What to expect during discovery", "note": "What happens before any code is written." }
+      {
+        "to": "/product/hrms",
+        "label": "HRMS",
+        "note": "Attendance, shifts, leave and approvals."
+      },
+      {
+        "to": "/product/mobile-apps",
+        "label": "Mobile apps",
+        "note": "Field apps for staff on site."
+      },
+      {
+        "to": "/insights/what-to-expect-during-erp-discovery",
+        "label": "What to expect during discovery",
+        "note": "What happens before any code is written."
+      }
+    ]
+  },
+  {
+    "slug": "salons",
+    "name": "Salons and beauty",
+    "title": "Software for Salons and Beauty Businesses | Beforth",
+    "description": "Billing, floor operations, attendance, payroll and multi-branch finance in one salon system, built by Beforth in Nashik.",
+    "keywords": "salon software India, salon ERP, multi-branch salon management software, salon billing software, salon attendance and payroll, salon software Nashik",
+    "headline": "salons and beauty businesses",
+    "lead": "BeForth is a software company based in Nashik, Maharashtra, founded in 2025. We built a multi-branch salon system. Our salon product page shows it running with sample data. This page lists what the system does, described from the system itself.",
+    "groups": [
+      {
+        "title": "Billing and customers",
+        "intro": "From the chair to the receipt.",
+        "items": [
+          "Fast bill creation with packages and pending services.",
+          "Payments in several methods, including cash and UPI, with GST handling.",
+          "Thermal receipts, and barcode and QR printing.",
+          "Customer records with a detail page for each customer."
+        ]
+      },
+      {
+        "title": "Floor operations",
+        "intro": "Who is free, who is next and which chair.",
+        "items": [
+          "Chair management and a token queue.",
+          "Staff rotation and allocation, with skills recorded for each person.",
+          "A live view of each employee's status."
+        ]
+      },
+      {
+        "title": "Attendance, shifts and pay",
+        "intro": "Punches in, wages out.",
+        "items": [
+          "Attendance from a biometric machine, manual entry by a manager or cashier, or a geofenced check-in from the staff member's phone, with an optional selfie stamped with location and time.",
+          "Shifts assigned per employee per day, with a grace period, tiered late fines and half-day rules. Overnight shifts are supported.",
+          "Payroll visible to the owner only, with daily or monthly wages, late deductions and a monthly report with CSV export.",
+          "An incentive engine that can be set up for each branch, with monthly payouts."
+        ]
+      },
+      {
+        "title": "Branches, stock and money",
+        "intro": "Every branch on one system.",
+        "items": [
+          "Several branches, each with its own settings.",
+          "Products, SKUs, warehouses, suppliers, purchase batches and stock transfers.",
+          "Cash drawer, expenses, savings pots, bank deposits, counter withdrawals and UPI accounts, with cash reconciliation.",
+          "Branch and staff performance, revenue and attendance reports.",
+          "An installable web app that works from the phone's home screen."
+        ]
+      }
+    ],
+    "note": "Every system above was shaped around one business's process. Yours would be scoped the same way, starting with discovery. We describe the work without naming clients.",
+    "links": [
+      {
+        "to": "/product/salon-erp",
+        "label": "Salon ERP",
+        "note": "See it running with sample data."
+      },
+      {
+        "to": "/product/hrms",
+        "label": "HRMS",
+        "note": "Attendance, shifts, leave and approvals."
+      },
+      {
+        "to": "/product/payroll",
+        "label": "Payroll",
+        "note": "Deductions, approvals and payslips."
+      }
+    ]
+  },
+  {
+    "slug": "food-retail",
+    "name": "Restaurants, bakeries and food retail",
+    "title": "Software for Restaurants, Bakeries and Food Retail | Beforth",
+    "description": "POS, kitchen orders, menus, recipes, stock and online ordering for restaurants and food retail, built by Beforth in Nashik.",
+    "keywords": "restaurant POS software India, bakery POS and inventory software, multi-outlet POS, restaurant online ordering app, recipe based inventory, food retail software Nashik",
+    "headline": "restaurants, bakeries and food retail",
+    "lead": "BeForth is a software company based in Nashik, Maharashtra, founded in 2025. We built a multi-outlet POS with recipe-based stock, a restaurant POS with menus and online channels, and ordering sites and apps for a food brand. This page lists what they do, described from the systems themselves.",
+    "groups": [
+      {
+        "title": "Multi-outlet POS and stock",
+        "intro": "For a retail or bakery business with several outlets.",
+        "items": [
+          "Several outlets managed from one master view. Each outlet keeps its own stock and sales.",
+          "A fast POS terminal with live stock alerts on each item.",
+          "Tables and kitchen order tickets.",
+          "Recipes that deduct raw materials automatically as items sell, with a bill of materials for each product.",
+          "Production runs, raw material stock and raw material sales.",
+          "Stock transfers between outlets, with a log of every transfer, inward entry and adjustment.",
+          "Credit customers with their payments, barcode printing, and dashboards, analytics and reports."
+        ]
+      },
+      {
+        "title": "Restaurant POS, menus and channels",
+        "intro": "For a restaurant that sells dine-in, delivery, parcel and online.",
+        "items": [
+          "Menus for dine-in, home delivery, parcel and online channels, including Swiggy and Zomato menus, with prices that can differ by dining area.",
+          "Items with variations and add-ons, and combos.",
+          "Dining areas and tables, kitchen order tickets, live orders and an order history.",
+          "Online orders received through an integration, and website orders from a web shop.",
+          "Taxes, discounts and commissions that can be set per item or category.",
+          "Scheduled menu changes, price templates, and switching items on or off.",
+          "Day-end closure, expenses and withdrawals, with an audit trail of orders and activity.",
+          "Inventory with raw materials, suppliers, purchases and purchase orders, purchase and sales returns, recipes, production, wastage and stock transfers."
+        ]
+      },
+      {
+        "title": "Ordering sites and apps",
+        "intro": "Where the customer places the order.",
+        "items": [
+          "A customer ordering website with menu, cart, checkout, order tracking and order history.",
+          "A mobile app for Android with sign-in, menu, cart, checkout and order tracking.",
+          "A fast brand website with structured data for search engines."
+        ]
+      }
+    ],
+    "note": "Every system above was shaped around one business's process. Yours would be scoped the same way, starting with discovery. We describe the work without naming clients.",
+    "links": [
+      {
+        "to": "/product/pos",
+        "label": "POS and billing",
+        "note": "GST billing, UPI, card and live stock."
+      },
+      {
+        "to": "/product/mobile-apps",
+        "label": "Mobile apps",
+        "note": "Android and iOS, native or cross-platform."
+      },
+      {
+        "to": "/product/websites",
+        "label": "Websites and portals",
+        "note": "Including customer portals."
+      }
+    ]
+  },
+  {
+    "slug": "field-sales",
+    "name": "Field sales and service teams",
+    "title": "Software for Field Sales and Service Teams | Beforth",
+    "description": "Leads, field visits, follow-ups, tasks and reports for sales and service teams on the move, built by Beforth in Nashik.",
+    "keywords": "field sales app India, field visit tracking software, sales visit CRM, field force management app, field service CRM Nashik",
+    "headline": "field sales and service teams",
+    "lead": "BeForth is a software company based in Nashik, Maharashtra, founded in 2025. We built a field visit and CRM system with a phone app and a web dashboard. This page lists what it does, described from the system itself, and what our other systems add for people working away from the office.",
+    "groups": [
+      {
+        "title": "Leads, visits and follow-ups",
+        "intro": "Who to see, what happened and what comes next.",
+        "items": [
+          "Customers and leads, with a status for each lead.",
+          "Field visits logged with an outcome.",
+          "Follow-ups, and tasks with a type, priority and status.",
+          "Notifications to the team, and a log of what was sent.",
+          "Roles for the team, with sales executive as the default."
+        ]
+      },
+      {
+        "title": "On the phone and on the desk",
+        "intro": "Two screens for two kinds of work.",
+        "items": [
+          "A mobile app with a dashboard of today's schedule and recent activity, a searchable list of visits, and a form to submit a report.",
+          "Analytics with a weekly chart and a breakdown of visit outcomes.",
+          "A web dashboard alongside the app."
+        ]
+      },
+      {
+        "title": "Also built into our other systems",
+        "intro": "Pieces that suit people working away from the office.",
+        "items": [
+          "Geofenced check-in from the phone, with an optional selfie stamped with location and time.",
+          "A visiting-card contact list in our B2B sales platform, and a separate card-scanner app.",
+          "Monthly sales targets for each employee, region and domain in our B2B sales platform.",
+          "Live location and duty tracking for delivery staff."
+        ]
+      }
+    ],
+    "note": "Every system above was shaped around one business's process. Yours would be scoped the same way, starting with discovery. We describe the work without naming clients.",
+    "links": [
+      {
+        "to": "/product/crm",
+        "label": "CRM",
+        "note": "Leads, pipeline stages and follow-ups."
+      },
+      {
+        "to": "/product/mobile-apps",
+        "label": "Mobile apps",
+        "note": "Field apps for staff on the move."
+      },
+      {
+        "to": "/industries/pharma",
+        "label": "Pharma systems",
+        "note": "Delivery tracking and B2B sales."
+      }
+    ]
+  },
+  {
+    "slug": "platforms",
+    "path": "/platforms",
+    "name": "Platforms and tools",
+    "h1Prefix": "Platforms and tools we have ",
+    "headline": "built",
+    "label": "Platforms and tools",
+    "title": "Platforms and Tools Built by Beforth, Nashik",
+    "description": "A GSTIN lookup API, an on-device business-card scanner, a password vault and a self-hosted mail stack, built by Beforth in Nashik.",
+    "keywords": "GSTIN verification API India, business card scanner app, password vault, self-hosted mail server, tools built by Beforth",
+    "lead": "BeForth is a software company based in Nashik, Maharashtra, founded in 2025. Besides client systems, we have built platforms and tools of our own. SerOp, TunnelGate and 4Form have their own pages, linked below.",
+    "groups": [
+      {
+        "title": "GSTIN lookup API",
+        "intro": "A platform for looking up GST registration details by GSTIN.",
+        "items": [
+          "A keyed, versioned API with rate limits, monthly quotas and a stable response format.",
+          "A dashboard with sign-in, API keys, usage, API documentation with a try-it console, and team management. Administrators add everyone else, so there is no open sign-up.",
+          "Data comes from third-party providers and public portals, including the official GST portal and the e-way bill taxpayer search, where a person types the CAPTCHA.",
+          "The data is best-effort and is not authoritative for tax or compliance decisions."
+        ]
+      },
+      {
+        "title": "Business-card scanner",
+        "intro": "An app that turns a photo of a business card into a contact.",
+        "items": [
+          "Scans cards with the phone's document scanner, then reads names, phone numbers, email addresses and social links on the device.",
+          "Contacts stay on the phone.",
+          "Favourites, tags and follow-up reminders.",
+          "Import and export as vCard or CSV, on Android and iOS."
+        ]
+      },
+      {
+        "title": "Password vault",
+        "intro": "A web vault for a team's shared logins.",
+        "items": [
+          "Entries with detail pages, and shared vaults.",
+          "An audit log and user management."
+        ]
+      },
+      {
+        "title": "Self-hosted mail",
+        "intro": "A mail stack for a small business with its own domains.",
+        "items": [
+          "Sized for a server with 1 GB of memory, 20 to 100 mailboxes and several custom domains.",
+          "SMTP, IMAP and POP3, with spam filtering, DKIM, SPF and DMARC built in, and webmail.",
+          "Domains are added by an administrator, not by self-service sign-up."
+        ]
+      }
+    ],
+    "note": "These are things we built, some for our own use and some as products. Each line describes what the software does. We do not name clients.",
+    "links": [
+      {
+        "to": "/product/serop",
+        "label": "SerOp",
+        "note": "Free, open-source SSH, Docker and deploy desktop app."
+      },
+      {
+        "to": "/product/tunnelgate",
+        "label": "TunnelGate",
+        "note": "Remote desktop over Cloudflare Zero Trust."
+      },
+      {
+        "to": "/product/4form",
+        "label": "4Form",
+        "note": "Form builder and workflow platform."
+      }
     ]
   }
 ]

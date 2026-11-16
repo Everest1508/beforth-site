@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { ArrowRight, ArrowUpRight, Check } from 'lucide-react';
 import Reveal from '../components/Reveal';
 import { Magnetic } from '../components/Magnetic';
-import { INDUSTRY_PAGES, INDUSTRIES_PATH, industryPath } from '../data/industries';
+import { INDUSTRY_PAGES, INDUSTRIES_PATH, industryPath, h1Prefix } from '../data/industries';
 
 /**
  * One industry page, rendered from src/data/industries.json.
@@ -22,9 +22,9 @@ export default function IndustryPage({ slug }: { slug: string }) {
         <div className="wrap">
           <Reveal>
             <div className="rule mb-6" />
-            <span className="label block mb-6">Industries / {ind.name}</span>
+            <span className="label block mb-6">{ind.label ?? `Industries / ${ind.name}`}</span>
             <h1 className="display-xl text-[clamp(2.2rem,6.4vw,4.8rem)] max-w-[20ch]">
-              Software for <span className="accent">{ind.headline}.</span>
+              {h1Prefix(ind)}<span className="accent">{ind.headline}.</span>
             </h1>
             <p className="lead max-w-2xl mt-7">{ind.lead}</p>
             <div className="mt-9 flex flex-wrap items-center gap-x-8 gap-y-4">
@@ -96,7 +96,7 @@ export default function IndustryPage({ slug }: { slug: string }) {
             </ul>
             {others.length > 0 && (
               <div className="mt-10 pt-8 border-t border-ink/15">
-                <span className="label block mb-4">Other industries</span>
+                <span className="label block mb-4">More we have built</span>
                 <ul className="flex flex-wrap gap-x-6 gap-y-2">
                   {others.map((o) => (
                     <li key={o.slug}>

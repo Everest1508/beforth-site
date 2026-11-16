@@ -18,6 +18,12 @@ export interface IndustryGroup {
 
 export interface Industry {
   slug: string;
+  /** Overrides /industries/<slug> for pages that are not an industry. */
+  path?: string;
+  /** Overrides "Software for " in the H1. */
+  h1Prefix?: string;
+  /** Overrides "Industries / <name>" above the H1. */
+  label?: string;
   name: string;
   title: string;
   description: string;
@@ -32,7 +38,13 @@ export interface Industry {
 export const INDUSTRY_PAGES = data as Industry[];
 
 export const INDUSTRIES_PATH = '/industries';
-export const industryPath = (slug: string) => `${INDUSTRIES_PATH}/${slug}`;
+export const industryPath = (slug: string) =>
+  INDUSTRY_PAGES.find((i) => i.slug === slug)?.path ?? `${INDUSTRIES_PATH}/${slug}`;
+
+/** Pages that are industries, as opposed to the platforms page. */
+export const INDUSTRY_ONLY = INDUSTRY_PAGES.filter((i) => !i.path);
+
+export const h1Prefix = (i: Industry) => i.h1Prefix ?? 'Software for ';
 
 /** Route metadata for every industry page and the hub. */
 export function industryMeta(): Record<string, { title: string; description: string; keywords: string }> {
@@ -41,10 +53,10 @@ export function industryMeta(): Record<string, { title: string; description: str
     out[industryPath(i.slug)] = { title: i.title, description: i.description, keywords: i.keywords };
   }
   out[INDUSTRIES_PATH] = {
-    title: 'Industries | Pharma and Interior Contractor Software — Beforth',
+    title: 'Industries We Build Software For | Beforth, Nashik',
     description:
-      'Custom software built by Beforth, Nashik, for pharma distribution and operations and for interior and fit-out contractors, described from the systems.',
-    keywords: 'pharma software India, interior contractor software India, industry software Nashik',
+      'Software built by Beforth, Nashik, for pharma, salons, restaurants and food retail, interior contractors and field sales teams, described from the systems.',
+    keywords: 'pharma software India, salon software India, restaurant POS India, interior contractor software India, field sales app India',
   };
   return out;
 }
