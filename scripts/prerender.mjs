@@ -24,6 +24,7 @@ import { readFile, writeFile, mkdir, access, stat, rm } from 'node:fs/promises';
 import { existsSync } from 'node:fs';
 import path from 'node:path';
 import { LOCATION_ROUTES } from './locations.mjs';
+import { INDUSTRY_ROUTES } from './industries.mjs';
 import { fileURLToPath } from 'node:url';
 import puppeteer from 'puppeteer';
 
@@ -59,6 +60,7 @@ const ROUTES = [
   '/team',
   '/contact',
   ...LOCATION_ROUTES,
+  ...INDUSTRY_ROUTES,
   '/privacy-policy',
   '/terms',
   '/cookie-policy',

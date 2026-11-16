@@ -15,6 +15,7 @@ import puppeteer from 'puppeteer';
 import { mkdir, writeFile, readFile } from 'node:fs/promises';
 import path from 'node:path';
 import { LOCATIONS, locationPath } from './locations.mjs';
+import { INDUSTRIES } from './industries.mjs';
 import { fileURLToPath } from 'node:url';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
@@ -191,6 +192,18 @@ async function main() {
           : { eyebrow: 'Custom software', title: `Custom software development in ${l.name} | BeForth`, sub: 'Business systems, web and mobile apps, integrations.' };
     }
   }
+  for (const i of INDUSTRIES) {
+    ROUTE_META[`/industries/${i.slug}`] = {
+      eyebrow: 'Industries',
+      title: `Software for ${i.headline} | BeForth`,
+      sub: 'What we have built, described from the systems.',
+    };
+  }
+  ROUTE_META['/industries'] = {
+    eyebrow: 'Industries',
+    title: 'What we have built, by industry | BeForth',
+    sub: 'Pharma and interior contractors.',
+  };
   ROUTE_META['/locations'] = {
     eyebrow: 'Locations',
     title: 'Where we deliver | BeForth',

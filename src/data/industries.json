@@ -1,0 +1,121 @@
+[
+  {
+    "slug": "pharma",
+    "name": "Pharma",
+    "title": "Software for Pharma Distribution and Operations | Beforth",
+    "description": "Delivery and collection, Tally inventory sync and B2B sales and service software for pharma businesses, built by Beforth in Nashik.",
+    "keywords": "pharma distribution software, pharma delivery tracking software, Tally inventory sync, pharma ERP India, pharma CRM India, pharma software company Nashik",
+    "headline": "pharma distribution and operations",
+    "lead": "BeForth is a software company based in Nashik, Maharashtra, founded in 2025. We build custom systems for pharma distributors and pharma companies. This page lists what we have built, described from the systems themselves.",
+    "groups": [
+      {
+        "title": "Delivery and collection",
+        "intro": "A system for a pharma distribution business, from the invoice to the signed copy and the cash or cheque collected.",
+        "items": [
+          "Invoices can be entered by hand or taken in from a company mailbox. PDF attachments are read and turned into pending invoices, using an AI-assisted parser with a rule-based fallback.",
+          "Each invoice moves through pending, assigned, delivered or cancelled, and is assigned to a delivery person.",
+          "The delivery app reports live location. Routes are smoothed and snapped to roads, with checkpoints recorded along the way.",
+          "Proof of delivery with a signed copy, and the delivery location captured.",
+          "Cash and cheque collection recorded against the invoice, with cheque details, a cheque photo and a confirmation step.",
+          "An invoice can be released back to a shared pool with a reason, so another person can take it.",
+          "Delivery feedback with a reason, an audit trail of invoice changes, and push notifications.",
+          "Duty tracking from location and battery signals.",
+          "Roles for super admin, admin, manager, staff and delivery."
+        ]
+      },
+      {
+        "title": "Inventory from Tally",
+        "intro": "Many businesses keep stock in Tally. We built a service that reads it out, so other systems can use it.",
+        "items": [
+          "Reads stock items and stock movements from one or more Tally servers through Tally's XML interface, into a PostgreSQL database.",
+          "Scans the network to find Tally servers, and keeps a record of every sync run.",
+          "A REST API with API keys for read-only and admin access, a web screen, and CSV export.",
+          "Limits on failed sign-ins, and an audit log of who did what."
+        ]
+      },
+      {
+        "title": "Sales, export and after-sales service",
+        "intro": "A B2B sales and service platform that follows a deal from the first lead to the service visit.",
+        "items": [
+          "Leads with configurable statuses, types and sources, grouped into campaigns.",
+          "Orders with configurable statuses, and an activity trail with attachments.",
+          "Customers, contacts and plants, and a visiting-card contact list.",
+          "Domestic and export domains, split into regions with a head and a coordinator for each.",
+          "Monthly targets for each employee, region and domain.",
+          "Exhibition and event tracking with files.",
+          "Service contracts, planned visits, work orders with materials and approvals, calibration records and complaints.",
+          "Saved dashboards, report templates and notifications."
+        ]
+      },
+      {
+        "title": "People and HR",
+        "intro": "An employee app that sits next to the business systems.",
+        "items": [
+          "A mobile app with attendance, shifts, leave, expenses and payroll screens."
+        ]
+      }
+    ],
+    "note": "Every system above was shaped around one business's process. Yours would be scoped the same way, starting with discovery. We describe the work without naming clients.",
+    "links": [
+      { "to": "/product/delivery-tracking", "label": "Delivery tracking", "note": "Driver app, proof of delivery and routes." },
+      { "to": "/product/hrms", "label": "HRMS", "note": "Attendance, shifts, leave and approvals." },
+      { "to": "/insights/custom-erp-or-off-the-shelf", "label": "Custom or off-the-shelf?", "note": "How to decide before you spend anything." }
+    ]
+  },
+  {
+    "slug": "interiors",
+    "name": "Interior and fit-out contractors",
+    "title": "Software for Interior and Fit-out Contractors | Beforth",
+    "description": "Projects, site attendance, daily reports, subcontractors and client payments in one system for interior contractors, built by Beforth in Nashik.",
+    "keywords": "interior contractor software, interior design project management software, site management software India, fit-out contractor ERP, construction project management software Nashik",
+    "headline": "interior and fit-out contractors",
+    "lead": "BeForth is a software company based in Nashik, Maharashtra, founded in 2025. We built an operations system for an interiors business, covering projects, site staff, subcontractors, payments and a view for the client. This page lists what it does, described from the system itself.",
+    "groups": [
+      {
+        "title": "Projects and stages",
+        "intro": "One record for each job, from booking to handover.",
+        "items": [
+          "Each project holds the client, site address, project lead, supervisors and workers, start and target dates, total cost and status.",
+          "A master template of twelve stages, each with a duration and a default trade, that new projects start from.",
+          "Stages with their own dates, planned hours and status.",
+          "Tasks with type, priority, due date, assignees and site photos."
+        ]
+      },
+      {
+        "title": "Subcontractors and money",
+        "intro": "Who does the work, and what is owed in each direction.",
+        "items": [
+          "A directory of agencies with trade, skills, team size, rate per unit, payment terms, GSTIN and PAN, a rating, and the stages each can cover.",
+          "Client payments as installments, starting with the booking advance, with due dates, receipts and the mode of payment.",
+          "Labour payouts by daily or other wage type, with vouchers and a pending or paid status.",
+          "Expenses and incentives."
+        ]
+      },
+      {
+        "title": "Site staff",
+        "intro": "Knowing who is on site and what got done.",
+        "items": [
+          "Attendance checked against geofenced sites, with a radius for each site, shift timings, a grace period, half-day and overtime rules, and approval of attendance requests.",
+          "Daily status reports with time spent, category, project and file attachments.",
+          "Leave types, leave requests, payslips and holiday lists.",
+          "Notifications."
+        ]
+      },
+      {
+        "title": "Roles and the client view",
+        "intro": "Everyone sees their own part.",
+        "items": [
+          "Five roles: owner, manager, site supervisor, site worker and client. Owners can change what each role is allowed to do.",
+          "A client role with its own view of project milestones and payments.",
+          "Role-based dashboards and reports."
+        ]
+      }
+    ],
+    "note": "This system was shaped around one business's process. Yours would be scoped the same way, starting with discovery. We describe the work without naming clients.",
+    "links": [
+      { "to": "/product/hrms", "label": "HRMS", "note": "Attendance, shifts, leave and approvals." },
+      { "to": "/product/mobile-apps", "label": "Mobile apps", "note": "Field apps for staff on site." },
+      { "to": "/insights/what-to-expect-during-erp-discovery", "label": "What to expect during discovery", "note": "What happens before any code is written." }
+    ]
+  }
+]

@@ -51,6 +51,13 @@ Each has a page with module lists, workflow steps and its own FAQ.
 - Server Operator (SerOp) — free open-source SSH, Docker and deploy desktop app: https://beforth.in/product/serop
 - 4Form — form builder and workflow platform: https://beforth.in/product/4form
 
+## Industries
+
+Systems we have built, described without client names: https://beforth.in/industries
+
+- Software for pharma distribution and operations: https://beforth.in/industries/pharma
+- Software for interior and fit-out contractors: https://beforth.in/industries/interiors
+
 ## Insights
 
 Plain-language guides on choosing and running business systems, published by BeForth.

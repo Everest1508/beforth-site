@@ -1,6 +1,7 @@
 import React, { Suspense, useEffect, useLayoutEffect, useRef, useState } from 'react';
 import { Routes, Route, Link, useLocation } from 'react-router-dom';
 import { LOCATION_PAGES, LOCATIONS_PATH, locationMeta } from './data/locations';
+import { INDUSTRY_PAGES, INDUSTRIES_PATH, industryMeta, industryPath } from './data/industries';
 import { LazyMotion, MotionConfig, domAnimation } from 'motion/react';
 import * as m from 'motion/react-m';
 import { ArrowUpRight, ArrowRight, ArrowDown, Mail, Phone, MapPin, Check, Compass, Handshake, MousePointerClick, Puzzle } from 'lucide-react';
@@ -76,6 +77,10 @@ const LocationPage = lazyRoute<{ kind: 'erp' | 'custom'; slug: string }>(() => i
 const loadLocation = LocationPage.preload;
 const LocationsHub = lazyRoute(() => import('./pages/LocationsHub'));
 const loadLocationsHub = LocationsHub.preload;
+const IndustryPage = lazyRoute<{ slug: string }>(() => import('./pages/IndustryPage'));
+const loadIndustry = IndustryPage.preload;
+const IndustriesHub = lazyRoute(() => import('./pages/IndustriesHub'));
+const loadIndustriesHub = IndustriesHub.preload;
 
 const NAV = [
   { path: '/', label: 'Home' },
@@ -846,6 +851,16 @@ function Sectors() {
     <section className="pb-20 md:py-20">
       <div className="wrap">
         <SectionHead title="Where we do our best work." />
+        <p className="body max-w-2xl mb-8">
+          We have written up the systems we built for{' '}
+          {INDUSTRY_PAGES.map((i, n) => (
+            <React.Fragment key={i.slug}>
+              {n > 0 && ' and '}
+              <Link to={industryPath(i.slug)} className="text-ink underline underline-offset-4 decoration-signal hover:text-signal transition-colors">{i.name.toLowerCase()}</Link>
+            </React.Fragment>
+          ))}
+          . <Link to={INDUSTRIES_PATH} className="text-ink underline underline-offset-4 decoration-signal hover:text-signal transition-colors">See all industries</Link>.
+        </p>
         <ul className="grid md:grid-cols-2 gap-x-14 border-t border-ink/15">
           {INDUSTRIES.map((industry) => (
             <li key={industry.name} className="grid grid-cols-[28px_1fr] gap-x-4 py-5 border-b border-ink/15">
@@ -966,6 +981,14 @@ function Footer() {
                   className="flex items-center min-h-[28px] body-tight hover:text-signal transition-colors"
                 >
                   Where we deliver
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/industries"
+                  className="flex items-center min-h-[28px] body-tight hover:text-signal transition-colors"
+                >
+                  Industries we build for
                 </Link>
               </li>
             </ul>
@@ -1115,6 +1138,10 @@ Object.assign(META, LEGAL_META);
 const LOCATION_META = locationMeta();
 Object.assign(META, LOCATION_META);
 
+/** Industry pages and the /industries hub. Content lives in src/data/industries.json. */
+const INDUSTRY_META = industryMeta();
+Object.assign(META, INDUSTRY_META);
+
 function setMeta(selector: string, attrs: Record<string, string>, content: string) {
   let el = document.head.querySelector(selector) as HTMLMetaElement | null;
   if (!el) {
@@ -1139,6 +1166,8 @@ export function preloadRoute(pathname: string): Promise<unknown> {
   if (p.startsWith('/product/')) return loadProductPage();
   if (p in LEGAL_META) return loadLegal();
   if (p === LOCATIONS_PATH) return loadLocationsHub();
+  if (p === INDUSTRIES_PATH) return loadIndustriesHub();
+  if (p in INDUSTRY_META) return loadIndustry();
   if (p in LOCATION_META) return loadLocation();
   return NotFound.preload();
 }
@@ -1329,6 +1358,10 @@ export default function App() {
                 <Route key={p.path} path={p.path} element={<LocationPage kind={p.kind} slug={p.loc.slug} />} />
               ))}
               <Route path={LOCATIONS_PATH} element={<LocationsHub />} />
+              {INDUSTRY_PAGES.map((i) => (
+                <Route key={i.slug} path={industryPath(i.slug)} element={<IndustryPage slug={i.slug} />} />
+              ))}
+              <Route path={INDUSTRIES_PATH} element={<IndustriesHub />} />
               <Route path="/product/:slug" element={<ProductPage />} />
               <Route path="*" element={<NotFound />} />
             </Routes>

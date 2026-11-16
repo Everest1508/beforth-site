@@ -77,6 +77,18 @@
       "destination": "/locations/index.html"
     },
     {
+      "source": "/industries/pharma",
+      "destination": "/industries/pharma/index.html"
+    },
+    {
+      "source": "/industries/interiors",
+      "destination": "/industries/interiors/index.html"
+    },
+    {
+      "source": "/industries",
+      "destination": "/industries/index.html"
+    },
+    {
       "source": "/about",
       "destination": "/about/index.html"
     },
