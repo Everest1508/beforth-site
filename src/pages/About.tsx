@@ -190,7 +190,8 @@ export default function AboutPage() {
 
               <div className="mt-10 pt-8 border-t border-ink/12">
                 <p className="body max-w-lg mb-6">
-                  If your sector is not listed, that is not a blocker. The method is the same.
+                  If your sector is not listed, that is not a blocker. The method is the same. We are based in
+                  Nashik and <Link to="/locations" className="ulink">deliver across India</Link>.
                 </p>
                 <Magnetic>
                   <Link to="/contact" className="btn-signal">

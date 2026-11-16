@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { ArrowRight, ArrowUpRight, ArrowDown, Check } from 'lucide-react';
 
@@ -9,54 +9,9 @@ import { Magnetic } from '@/components/Magnetic';
 import { getPlatform } from '@/components/platforms/catalog';
 import NotFound from './NotFound';
 
-const ORIGIN = 'https://beforth.in';
-
 export default function ProductPage() {
   const { slug } = useParams();
   const p = getPlatform(slug);
-
-  // Search engines read this: the service, where it sits on the site, and its FAQ.
-  useEffect(() => {
-    if (!p) return;
-    const url = `${ORIGIN}/product/${p.slug}`;
-    const data = {
-      '@context': 'https://schema.org',
-      '@graph': [
-        {
-          '@type': 'Service',
-          '@id': `${url}#service`,
-          name: p.name,
-          serviceType: p.name,
-          description: p.seoDescription,
-          url,
-          provider: { '@id': `${ORIGIN}/#organization` },
-          areaServed: ['IN', 'AE', 'US', 'GB', 'AU'],
-        },
-        {
-          '@type': 'BreadcrumbList',
-          itemListElement: [
-            { '@type': 'ListItem', position: 1, name: 'Home', item: `${ORIGIN}/` },
-            { '@type': 'ListItem', position: 2, name: 'Platforms', item: `${ORIGIN}/services` },
-            { '@type': 'ListItem', position: 3, name: p.name, item: url },
-          ],
-        },
-        {
-          '@type': 'FAQPage',
-          mainEntity: p.faq.map((f) => ({
-            '@type': 'Question',
-            name: f.q,
-            acceptedAnswer: { '@type': 'Answer', text: f.a },
-          })),
-        },
-      ],
-    };
-    const el = document.createElement('script');
-    el.type = 'application/ld+json';
-    el.id = 'ld-product';
-    el.text = JSON.stringify(data);
-    document.head.appendChild(el);
-    return () => el.remove();
-  }, [p]);
 
   if (!p) return <NotFound />;
 

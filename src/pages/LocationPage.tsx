@@ -132,6 +132,14 @@ export default function LocationPage({ kind, slug }: { kind: Kind; slug: string 
   const c = COPY[kind];
   const loc = LOCATIONS.find((l) => l.slug === slug) as Location;
   const label = kind === 'erp' ? `ERP software in ${loc.name}` : `Custom software in ${loc.name}`;
+  const extra =
+    slug === 'india'
+      ? [
+          { to: '/product/payroll', label: 'Payroll', note: 'PF, professional tax and TDS handled in the system.' },
+          { to: '/product/pos', label: 'POS and billing', note: 'GST billing, UPI, card and live stock.' },
+        ]
+      : [];
+  const links = [...c.links, ...extra];
   const others = LOCATION_PAGES.filter((p) => p.kind === kind && p.loc.slug !== slug);
 
   return (
@@ -277,7 +285,7 @@ export default function LocationPage({ kind, slug }: { kind: Kind; slug: string 
             <div className="rule mb-6" />
             <h2 className="display-lg text-[clamp(1.5rem,3.4vw,2.5rem)] mb-8 max-w-[22ch]">Read before you decide.</h2>
             <ul className="grid md:grid-cols-3 gap-x-10 border-t border-ink/15">
-              {c.links.map((l) => (
+              {links.map((l) => (
                 <li key={l.to} className="py-6 border-b border-ink/15">
                   <Link to={l.to} className="ulink">
                     {l.label} <ArrowUpRight className="w-3.5 h-3.5" />

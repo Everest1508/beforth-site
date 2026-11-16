@@ -44,9 +44,10 @@ export function pageTitle(kind: PageKind, loc: Location): string {
 }
 
 export function pageDescription(kind: PageKind, loc: Location): string {
+  const who = loc.kind === 'city' ? `businesses in ${loc.name}` : `businesses across ${loc.name}`;
   return kind === 'erp'
-    ? `Custom ERP for ${loc.focus} in ${loc.name} from Beforth, a software company in Nashik: inventory, sales, purchase, approvals and reporting.`
-    : `Custom software, web and mobile apps, automation and integrations for businesses in ${loc.name} from Beforth, a software company in Nashik.`;
+    ? `Custom ERP for ${who}: inventory, sales, purchase, approvals and reporting. Built by Beforth, a software company in Nashik.`
+    : `Custom software, web and mobile apps, automation and integrations for ${who}. Built by Beforth, a software company in Nashik.`;
 }
 
 export function pageKeywords(kind: PageKind, loc: Location): string {
@@ -65,7 +66,7 @@ export function locationMeta(): Record<string, { title: string; description: str
   out[LOCATIONS_PATH] = {
     title: 'Where We Deliver | Custom ERP & Software Across India — Beforth',
     description:
-      'Beforth is based in Nashik, Maharashtra and delivers custom ERP and software to businesses across India, including Maharashtra, Mumbai, Pune, Thane, Bengaluru and Surat.',
+      'Beforth, based in Nashik, delivers custom ERP and software across India: Maharashtra, Mumbai, Pune, Thane, Bengaluru, Surat and more.',
     keywords: 'ERP software India, custom software India, ERP software Maharashtra, ERP company Mumbai Pune Bengaluru Surat',
   };
   return out;

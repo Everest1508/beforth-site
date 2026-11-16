@@ -55,6 +55,11 @@ export const FAQ: { q: string; a: string; related?: string }[] = [
     related: 'contact',
   },
   {
+    q: 'Which cities and states do you deliver to?',
+    a: 'BeForth delivers across India. We are based in Nashik, Maharashtra, and work with businesses in Maharashtra, including Mumbai, Pune and Thane, as well as Bengaluru, Surat and other cities. Delivery is remote, with scheduled reviews. See the locations page for the places we have written about in detail.',
+    related: 'locations',
+  },
+  {
     q: 'What happens after we get in touch?',
     a: 'A conversation about the process you need to fix, not a sales pitch. If it looks like a fit, we map your workflows, roles and bottlenecks in discovery, then propose scope and architecture. You get a written understanding of the problem before committing to a build. We also say so when a project is a poor fit — a simple website, or wanting zero customisation, are both reasons to look elsewhere.',
     related: 'services',

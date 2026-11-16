@@ -270,6 +270,10 @@ export default function ServicesPage() {
         <div className="wrap">
           <Reveal>
             <div className="rule mb-9" />
+            <p className="body max-w-xl mb-8">
+              We are based in Nashik and deliver across India.{' '}
+              <Link to="/locations" className="ulink">See where we deliver <ArrowUpRight className="w-3.5 h-3.5" /></Link>
+            </p>
             <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-7">
               <h2 className="display-lg text-[clamp(1.5rem,3.4vw,2.5rem)] max-w-[22ch]">
                 Not sure which one you need? That is normal.

@@ -795,6 +795,7 @@ function faqLinkLabel(slug: string): string {
   if (platform) return `${platform.name} details`;
   if (slug === 'services') return 'All services';
   if (slug === 'contact') return 'Contact the team';
+  if (slug === 'locations') return 'Where we deliver';
   return 'Read more';
 }
 

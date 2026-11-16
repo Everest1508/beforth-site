@@ -12,7 +12,7 @@
  * If a fact is not published elsewhere on the site, it does not belong here.
  */
 
-import { LOCATION_PAGES, LOCATIONS_PATH } from '../data/locations';
+import { LOCATION_PAGES, LOCATIONS, LOCATIONS_PATH } from '../data/locations';
 import { PUBLISHED_INSIGHTS } from '@/data/insights';
 import { FAQ } from '@/data/faq';
 import { PLATFORMS } from '@/components/platforms/catalog';
@@ -128,10 +128,11 @@ const organization = () => ({
     addressRegion: ORG.addressRegion,
     addressCountry: ORG.addressCountry,
   },
-  areaServed: [
-    { '@type': 'Country', name: 'India' },
-    { '@type': 'Place', name: 'Nashik, Maharashtra' },
-  ],
+  // Owner-confirmed delivery area (designV2.md section 8), built from the same list as the location pages.
+  areaServed: LOCATIONS.map((l) => ({
+    '@type': l.kind === 'country' ? 'Country' : l.kind === 'state' ? 'AdministrativeArea' : 'City',
+    name: l.name,
+  })),
   sameAs: ORG.sameAs,
   hasMap: ORG.mapUrl,
   geo: { '@type': 'GeoCoordinates', ...ORG.geo },
@@ -324,6 +325,7 @@ function webPage(pathname: string, page: { title: string; description: string },
   const url = pathname === '/' ? ORIGIN + '/' : `${ORIGIN}${pathname}`;
   const isProduct = pathname.startsWith('/product/');
   const isArticle = pathname.startsWith('/insights/');
+  const isLocation = LOCATION_PAGES.some((p) => p.path === pathname);
   return {
     '@type': PAGE_TYPE[pathname] ?? 'WebPage',
     '@id': `${url}#webpage`,
@@ -335,6 +337,7 @@ function webPage(pathname: string, page: { title: string; description: string },
     about: { '@id': `${ORIGIN}/#organization` },
     ...(isProduct ? { mainEntity: { '@id': `${url}#service` } } : {}),
     ...(isArticle ? { mainEntity: { '@id': `${url}#article` } } : {}),
+    ...(isLocation ? { mainEntity: { '@id': `${url}#service` } } : {}),
     ...(hasCrumbs ? { breadcrumb: { '@id': `${url}#breadcrumb` } } : {}),
   };
 }
@@ -348,6 +351,21 @@ export function routeGraph(pathname: string, page?: { title: string; description
     ...people(),
     ...products(),
   ];
+
+  const locPage = LOCATION_PAGES.find((p) => p.path === pathname);
+  if (locPage) {
+    const url = `${ORIGIN}${pathname}`;
+    const { loc, kind } = locPage;
+    graph.push({
+      '@type': 'Service',
+      '@id': `${url}#service`,
+      name: kind === 'erp' ? `Custom ERP software in ${loc.name}` : `Custom software development in ${loc.name}`,
+      serviceType: kind === 'erp' ? 'Custom ERP software development' : 'Custom software development',
+      provider: { '@id': `${ORIGIN}/#organization` },
+      areaServed: { '@type': loc.kind === 'country' ? 'Country' : loc.kind === 'state' ? 'AdministrativeArea' : 'City', name: loc.name },
+      url,
+    });
+  }
 
   const faq = faqPageFor(pathname);
   if (faq) graph.push(faq);
