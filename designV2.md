@@ -301,12 +301,15 @@ These are rules, not preferences. Breaking one is a bug.
   example only if it is true. Topics not yet written stay in `TOPIC_BACKLOG`; thin posts
   written to fill a slot are worse than none. If `INSIGHTS` is ever emptied, `/insights`
   shows its honest empty state.
-- **Industry pages come from real systems.** `src/data/industries.json` lists what we have
-  built, written from the shipped codebases (2026-11-16 review of the BeForth organisation and
-  owner repositories). Every line must be something a system of ours actually does. Describe it
-  without naming a client: `clients.ts` is names only, so never tie a system to a named client,
-  and never add counts, timings or results. Do not add an industry unless a real system backs it.
-  Manufacturing has no page because no production system was found in those repositories.
+- **Industry pages come from real systems, or say they do not.** `src/data/industries.json`
+  lists what we have built, written from the shipped codebases (2026-11-16 review of the BeForth
+  organisation and owner repositories). Every line on such a page must be something a system of
+  ours actually does. Describe it without naming a client: `clients.ts` is names only, so never tie
+  a system to a named client, and never add counts, timings or results. A page that describes what
+  we build from our standard modules, with no past project behind it, sets `capability: true`,
+  says so in its note, and may reuse only wording already published on Services and the home page.
+  Manufacturing is such a page: no production system was found in the repositories reviewed. Replace
+  its capability lines with real ones when the owner supplies the system or its repository.
 - **Anything that depends on a rule that can change** (Indian payroll, GST, e-invoicing)
   needs an expert to verify it before it is published as an article.
 - **Schema must match visible content.** `FAQPage` only where an FAQ renders.

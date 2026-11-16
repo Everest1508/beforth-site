@@ -53,7 +53,7 @@ export default function IndustryPage({ slug }: { slug: string }) {
                   <p className="body max-w-md">{g.intro}</p>
                 </div>
                 <div className="surface p-6 md:p-9 h-fit">
-                  <span className="label block mb-5">What it does</span>
+                  <span className="label block mb-5">{ind.capability ? 'What it covers' : 'What it does'}</span>
                   <ul className="flex flex-col gap-3">
                     {g.items.map((item) => (
                       <li key={item} className="flex items-start gap-2.5">

@@ -18,8 +18,8 @@ export default function IndustriesHub() {
             </h1>
             <p className="lead max-w-2xl mt-7">
               BeForth is a software company based in Nashik, Maharashtra, founded in 2025. These pages describe systems
-              we have built, from the systems themselves. We list an industry here only when there is a real system
-              behind it.
+              we have built, written from the systems themselves. Where a page describes what we build from our standard
+              modules instead of a past project, it says so on the page.
             </p>
           </Reveal>
         </div>
@@ -34,7 +34,7 @@ export default function IndustriesHub() {
                   <h2 className="display-md text-[20px] mb-2">{i.name}</h2>
                   <p className="body-tight mb-4">{i.description}</p>
                   <Link to={industryPath(i.slug)} className="ulink">
-                    See what we built <ArrowUpRight className="w-3.5 h-3.5" />
+                    {i.capability ? 'See what we build' : 'See what we built'} <ArrowUpRight className="w-3.5 h-3.5" />
                   </Link>
                 </li>
               </Reveal>

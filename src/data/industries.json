@@ -1,5 +1,75 @@
 [
   {
+    "slug": "manufacturing",
+    "name": "Manufacturing",
+    "capability": true,
+    "h1Prefix": "ERP software for ",
+    "title": "ERP Software for Manufacturing Companies | Beforth",
+    "description": "Production workflows, raw material and stock, purchase, sales and reporting in one custom ERP for manufacturers, from Beforth in Nashik.",
+    "keywords": "manufacturing ERP India, ERP for manufacturing companies, production planning software, raw material inventory software, manufacturing ERP Nashik",
+    "headline": "manufacturing companies",
+    "lead": "BeForth is a software company based in Nashik, Maharashtra, founded in 2025. We build custom ERP for manufacturers, around how your shop floor and your office actually work. This page describes what a manufacturing system from BeForth covers.",
+    "groups": [
+      {
+        "title": "Production and materials",
+        "intro": "Production steps tied to the raw material and stock they use.",
+        "items": [
+          "Production workflows, with production-related inventory.",
+          "Raw material management.",
+          "Stock movement from receipt to issue to finished goods.",
+          "Reorder alerts, so a shortage shows before it stops a line."
+        ]
+      },
+      {
+        "title": "Stock, purchase and sales",
+        "intro": "Know what you have, where it is and what needs attention.",
+        "items": [
+          "Real-time stock visibility across stock, materials and warehouses.",
+          "Warehouse management.",
+          "Purchase management, with purchase and issue workflows.",
+          "Sales management.",
+          "Approvals on the steps that need a second pair of eyes."
+        ]
+      },
+      {
+        "title": "Connected to what you already run",
+        "intro": "Most manufacturers already have an accounts system and spreadsheets.",
+        "items": [
+          "A Tally sync we have built: it reads stock items and stock movements from Tally servers into a PostgreSQL database, with a REST API, API keys, a web screen, CSV export and an audit log.",
+          "Integrations and APIs to connect the ERP with accounting software and other systems.",
+          "Moving data out of spreadsheets into structured tables."
+        ]
+      },
+      {
+        "title": "People, reporting and automation",
+        "intro": "The rest of running a plant.",
+        "items": [
+          "Employee management, with attendance from biometric punches, shifts and leave.",
+          "Dashboards and business analytics.",
+          "Workflow automation for approvals, notifications and routine reports."
+        ]
+      }
+    ],
+    "note": "This page describes what we build from our standard modules. It does not list past projects. Each system is scoped around your process, starting with discovery, and we describe any work we mention without naming clients.",
+    "links": [
+      {
+        "to": "/product/erp",
+        "label": "See a business ERP running",
+        "note": "A sample build, shown with sample data."
+      },
+      {
+        "to": "/insights/custom-erp-or-off-the-shelf",
+        "label": "Custom or off-the-shelf?",
+        "note": "How to decide before you spend anything."
+      },
+      {
+        "to": "/product/hrms",
+        "label": "HRMS",
+        "note": "Attendance, shifts, leave and approvals."
+      }
+    ]
+  },
+  {
     "slug": "pharma",
     "name": "Pharma",
     "title": "Software for Pharma Distribution and Operations | Beforth",

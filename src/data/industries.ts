@@ -24,6 +24,8 @@ export interface Industry {
   h1Prefix?: string;
   /** Overrides "Industries / <name>" above the H1. */
   label?: string;
+  /** True for a page that describes what we build, not a past project. */
+  capability?: boolean;
   name: string;
   title: string;
   description: string;
@@ -55,8 +57,8 @@ export function industryMeta(): Record<string, { title: string; description: str
   out[INDUSTRIES_PATH] = {
     title: 'Industries We Build Software For | Beforth, Nashik',
     description:
-      'Software built by Beforth, Nashik, for pharma, salons, restaurants and food retail, interior contractors and field sales teams, described from the systems.',
-    keywords: 'pharma software India, salon software India, restaurant POS India, interior contractor software India, field sales app India',
+      'Custom software from Beforth, Nashik, for manufacturing, pharma, salons, restaurants, interior contractors and field sales teams.',
+    keywords: 'manufacturing ERP India, pharma software India, salon software India, restaurant POS India, interior contractor software India, field sales app India',
   };
   return out;
 }

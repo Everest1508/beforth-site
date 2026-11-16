@@ -196,13 +196,13 @@ async function main() {
     ROUTE_META[i.path ?? `/industries/${i.slug}`] = {
       eyebrow: 'Industries',
       title: `${i.h1Prefix ? i.h1Prefix.replace(/ $/, '') : 'Software for'} ${i.headline} | BeForth`,
-      sub: 'What we have built, described from the systems.',
+      sub: i.capability ? 'What we build, from our standard modules.' : 'What we have built, described from the systems.',
     };
   }
   ROUTE_META['/industries'] = {
     eyebrow: 'Industries',
     title: 'What we have built, by industry | BeForth',
-    sub: 'Pharma, salons, food retail, interiors and field teams.',
+    sub: 'Manufacturing, pharma, salons, food retail, interiors and field teams.',
   };
   ROUTE_META['/locations'] = {
     eyebrow: 'Locations',
