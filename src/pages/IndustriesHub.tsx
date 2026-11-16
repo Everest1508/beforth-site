@@ -18,8 +18,7 @@ export default function IndustriesHub() {
             </h1>
             <p className="lead max-w-2xl mt-7">
               BeForth is a software company based in Nashik, Maharashtra, founded in 2025. These pages describe systems
-              we have built, written from the systems themselves. Where a page describes what we build from our standard
-              modules instead of a past project, it says so on the page.
+              we have built, written from the systems themselves.
             </p>
           </Reveal>
         </div>

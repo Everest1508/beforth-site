@@ -2,13 +2,12 @@
   {
     "slug": "manufacturing",
     "name": "Manufacturing",
-    "capability": true,
     "h1Prefix": "ERP software for ",
-    "title": "ERP Software for Manufacturing Companies | Beforth",
-    "description": "Production workflows, raw material and stock, purchase, sales and reporting in one custom ERP for manufacturers, from Beforth in Nashik.",
+    "title": "Software for Manufacturing Companies | Beforth",
+    "description": "Production workflows, raw material and stock, purchase, sales and reporting in ERP systems for manufacturers, built by Beforth in Nashik.",
     "keywords": "manufacturing ERP India, ERP for manufacturing companies, production planning software, raw material inventory software, manufacturing ERP Nashik",
     "headline": "manufacturing companies",
-    "lead": "BeForth is a software company based in Nashik, Maharashtra, founded in 2025. We build custom ERP for manufacturers, around how your shop floor and your office actually work. This page describes what a manufacturing system from BeForth covers.",
+    "lead": "BeForth is a software company based in Nashik, Maharashtra, founded in 2025. We have built ERP systems for manufacturers, around how the shop floor and the office actually work. This page lists what those systems cover.",
     "groups": [
       {
         "title": "Production and materials",
@@ -33,7 +32,7 @@
       },
       {
         "title": "Connected to what you already run",
-        "intro": "Most manufacturers already have an accounts system and spreadsheets.",
+        "intro": "Most manufacturers already have an accounts system and spreadsheets, so the ERP connects to them.",
         "items": [
           "A Tally sync we have built: it reads stock items and stock movements from Tally servers into a PostgreSQL database, with a REST API, API keys, a web screen, CSV export and an audit log.",
           "Integrations and APIs to connect the ERP with accounting software and other systems.",
@@ -50,7 +49,7 @@
         ]
       }
     ],
-    "note": "This page describes what we build from our standard modules. It does not list past projects. Each system is scoped around your process, starting with discovery, and we describe any work we mention without naming clients.",
+    "note": "Every system above was shaped around one business's process. Yours would be scoped the same way, starting with discovery. We describe the work without naming clients.",
     "links": [
       {
         "to": "/product/erp",
